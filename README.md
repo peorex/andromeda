@@ -23,8 +23,7 @@ You are free to customize the theme and enhance it as per your website's require
 http://www.opensource.org/licenses/gpl-license.php
 
 
-Best wishes
-
-Georgi Kovachev
-peorex@gmail.com
+Best wishes<br><br>
+Georgi Kovachev<br>
+peorex@gmail.com<br>
 http://stonestreem.com

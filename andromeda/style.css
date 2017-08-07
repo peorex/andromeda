@@ -1,0 +1,722 @@
+/*
+Theme Name: Andromeda
+Theme URI: http://stonestreem.com/
+Description: Andromeda is 3 column theme, AdSense and widget ready, SEO friendly, easy for customization. Thanks to Steve Arun <a href="http://www.va4business.com" target="_blank">VA4Business</a>.
+Author: Georgi Kovachev
+Author URI: http://stonestreem.com/
+Version: 1.0.2
+
+Andromeda is based on Talian 1.0 of <a href="http://www.va4business.com" target="_blank">VA4Business</a>. Thanks to Steve Arun.
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+*/
+
+
+/* clear all start */
+*
+{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+
+	text-align: left;
+}
+/* clear all end */
+
+
+/* W3C start */
+
+/*
+The W3C recommends that the following CSS template be used as a default style sheet on your websites. Of course, you will probably need to change it but at least using the template will ensure you cover all bases.
+*/
+
+ADDRESS,
+BLOCKQUOTE,
+BODY, DD, DIV,
+DL, DT,
+FIELDSET, FORM,
+FRAME, FRAMESET,
+H1, H2, H3, H4,
+H5, H6, IFRAME,
+NOFRAMES,
+OBJECT, OL, P,
+UL, APPLET,
+CENTER, DIR,
+HR, MENU, PRE   { display: block }
+LI              { display: list-item }
+HEAD            { display: none }
+TABLE           { display: table }
+TR              { display: table-row }
+THEAD           { display: table-header-group }
+TBODY           { display: table-row-group }
+TFOOT           { display: table-footer-group }
+COL             { display: table-column }
+COLGROUP        { display: table-column-group }
+TD, TH          { display: table-cell }
+CAPTION         { display: table-caption }
+TH              { font-weight: bolder; text-align: center }
+CAPTION         { text-align: center }
+BODY            { padding: 8px; line-height: 1.33em }
+H1              { font-size: 2em; margin: .67em 0 }
+H2              { font-size: 1.5em; margin: .83em 0 }
+H3              { font-size: 1.17em; margin: 1em 0 }
+H4, P,
+BLOCKQUOTE, UL,
+FIELDSET, FORM,
+OL, DL, DIR,
+MENU            { margin: 1.33em 0 }
+H5              { font-size: .83em; line-height: 1.17em; margin: 1.67em 0 }
+H6              { font-size: .67em; margin: 2.33em 0 }
+H1, H2, H3, H4,
+H5, H6, B,
+STRONG          { font-weight: bolder }
+BLOCKQUOTE      { margin-left: 40px; margin-right: 40px }
+I, CITE, EM,
+VAR, ADDRESS    { font-style: italic }
+PRE, TT, CODE,
+KBD, SAMP       { font-family: monospace }
+PRE             { white-space: pre }
+BIG             { font-size: 1.17em }
+SMALL, SUB, SUP { font-size: .83em }
+SUB             { vertical-align: sub }
+SUP             { vertical-align: super }
+S, STRIKE, DEL  { text-decoration: line-through }
+HR              { border: 1px inset }
+OL, UL, DIR,
+MENU, DD        { margin-left: 40px }
+OL              { list-style-type: decimal }
+OL UL, UL OL,
+UL UL, OL OL    { margin-top: 0; margin-bottom: 0 }
+U, INS          { text-decoration: underline }
+CENTER          { text-align: center }
+BR:before       { content: "\A" }
+
+/* An example of style for HTML 4.0's ABBR/ACRONYM elements */
+
+ABBR, ACRONYM   { font-variant: small-caps; letter-spacing: 0.1em }
+A[href]         { text-decoration: underline }
+:focus          { outline: thin dotted invert }
+
+
+/* Begin bidirectionality settings (do not change) */
+BDO[DIR="ltr"]  { direction: ltr; unicode-bidi: bidi-override }
+BDO[DIR="rtl"]  { direction: rtl; unicode-bidi: bidi-override }
+
+*[DIR="ltr"]    { direction: ltr; unicode-bidi: embed }
+*[DIR="rtl"]    { direction: rtl; unicode-bidi: embed }
+
+/* Elements that are block-level in HTML4 */
+ADDRESS, BLOCKQUOTE, BODY, DD, DIV, DL, DT, FIELDSET,
+FORM, FRAME, FRAMESET, H1, H2, H3, H4, H5, H6, IFRAME,
+NOSCRIPT, NOFRAMES, OBJECT, OL, P, UL, APPLET, CENTER,
+DIR, HR, MENU, PRE, LI, TABLE, TR, THEAD, TBODY, TFOOT,
+COL, COLGROUP, TD, TH, CAPTION
+                { unicode-bidi: embed }
+/* End bidi settings */
+
+
+@media print {
+  page		{ margin: 10% }
+  H1, H2, H3,
+  H4, H5, H6    { page-break-after: avoid; page-break-inside: avoid }
+  BLOCKQUOTE,
+  PRE           { page-break-inside: avoid }
+  UL, OL, DL    { page-break-before: avoid }
+}
+
+/* @media speech { not supported yet, but should be*/
+@media aural {
+  H1, H2, H3,
+  H4, H5, H6    { voice-family: paul, male; stress: 20; richness: 90 }
+  H1            { pitch: x-low; pitch-range: 90 }
+  H2            { pitch: x-low; pitch-range: 80 }
+  H3            { pitch: low; pitch-range: 70 }
+  H4            { pitch: medium; pitch-range: 60 }
+  H5            { pitch: medium; pitch-range: 50 }
+  H6            { pitch: medium; pitch-range: 40 }
+  LI, DT, DD    { pitch: medium; richness: 60 }
+  DT            { stress: 80 }
+  PRE, CODE, TT { pitch: medium; pitch-range: 0; stress: 0; richness: 80 }
+  EM            { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }
+  STRONG        { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }
+  DFN           { pitch: high; pitch-range: 60; stress: 60 }
+  S, STRIKE     { richness: 0 }
+  I             { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }
+  B             { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }
+  U             { richness: 0 }
+  A:link        { voice-family: harry, male }
+  A:visited     { voice-family: betty, female }
+  A:active      { voice-family: betty, female; pitch-range: 80; pitch: x-high }
+}
+
+/* W3C end */
+
+
+/* tag styles redefinitions start */
+
+body
+{
+	font: 14px/1.5em  Arial, Verdana, 'Lucida Sans Unicode', sans-serif;
+	color: #000;
+}
+
+h1
+{
+	line-height: 1.17em;
+	letter-spacing: -1px;
+/*test-pr*/	background-color: #999;
+}
+
+UL
+{
+	list-style-type: disc;
+}
+
+a:link, a:visited
+{
+	color: #00f;
+	text-decoration: none;
+}
+a:hover, a:active
+{
+	color: #f00;
+	text-decoration: underline;
+}
+
+/* tag styles redefinitions end */
+
+
+/* general styles start */
+
+.aligncenter, div.aligncenter
+{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.alignleft
+{
+	float: left;
+}
+.alignright
+{
+	float: right;
+}
+
+h1 a:link, h1 a:visited
+{
+	color: #339;
+}
+h1 a:hover, h1 a:active
+{
+	color: #f00;
+}
+
+input, textarea
+{
+	font-family: inherit;
+	font-size: 1em;
+}
+
+.submit
+{
+	padding: 0;
+	text-align: center;
+}
+
+form p
+{
+	margin: 0px;
+	padding: 0px 0px 5px 0px;
+/*test-pr*/	background-color: #ccc;
+}
+form p *
+{
+	border: 1px solid #999;
+	padding: 3px;
+}
+form p input.textfield
+{
+	font-weight: bold;
+}
+form p *:hover
+{
+	border-color: #f00;
+}
+
+/* general styles end */
+
+
+/* other styles start */
+
+.footer p
+{
+	clear: both;
+	border-top: 1px solid #000;
+	font-size: 11px;
+	text-align: center;
+}
+
+.main
+{
+	margin: 0px auto;
+	width: 990px;
+/*test-pr*/	background-color: #ccc;
+}
+
+.header
+{
+	clear: both;
+	height: 100px;
+	background-color: #f00;
+}
+.logo
+{
+	float: left;
+	margin: 20px;
+	width: 60px;
+	height: 60px;
+}
+.header .title, .header .meta
+{
+	float: left;
+	margin: 5px 0 0 45px;
+	font: bold 40px/1.5em sans-serif;
+/*test-pr*/	background-color: #666;
+}
+.header .meta
+{
+	margin: 0 0 0 50px;
+	font-size: 18px;
+	color: #fff;
+/*test-pr*/	background-color: #6f6;
+}
+.header .title a
+{
+	color: #fff;
+	text-decoration: none;
+/*test-pr*/	background-color: #666;
+}
+
+/* ---------------------------------------------- */
+
+.navigation
+{
+	clear: both;
+	height: 32px;
+/*test-pr*/	background-color: #693;
+}
+.navigation ul
+{
+	float: left;
+	margin: 0;
+	list-style-type: none;
+/*test-pr*/	background-color: #9cc;
+}
+.navigation ul li
+{
+	display: inline;
+}
+.navigation ul li a:link, .navigation ul li a:visited
+{
+	float: left;
+	margin: 2px 2px 2px 0;
+	border: 1px solid #f00;
+	padding: 0 1em;
+
+	line-height: 26px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #f00;
+}
+.navigation ul li a:hover, .navigation ul li a:active
+{
+	background-color: #fff;
+	color: #f00;
+	text-decoration: none;
+}
+
+.navigation form
+{
+	float: right;
+	margin: 3px 0;
+	width: 420px;
+	height: 26px;
+/*test-pr*/	background-color: #f69;
+}
+.navigation input.textfield
+{
+	float: left;
+	margin: 0 2px 0 0;
+	border: 2px inset #000;
+	padding: 1px 2px;
+	width: 300px;
+}
+.navigation input.textfield:hover
+{
+	border-color: #f00;
+}
+.navigation input.submit
+{
+	float: left;
+	border: 2px solid #000;
+	width: 5.5em;
+
+	font-weight: bold;
+	color: #fff;
+	background-color: #000;
+}
+.navigation input.submit:hover
+{
+	background-color: #fff;
+	color: #000;
+}
+
+/* ---------------------------------------------- */
+
+.sidebar-1
+{
+	clear: left;
+	float: left;
+	margin: 10px 0;
+	width: 160px;
+/*test-pr*/	background-color: #0f0;
+}
+.sidebar-2
+{
+	clear: right;
+	float: right;
+	margin: 10px 0;
+	width: 160px;
+/*test-pr*/	background-color: #009;
+}
+
+.sidebar h2, .sidebar caption
+{
+	clear: both;
+	margin: 0;
+	border-top: 6px double #fff;
+	border-bottom: 6px double #fff;
+
+	font-weight: bold;
+	font-size: 1em;
+	text-indent: 1em;
+	text-align: left;
+	color: #fff;
+	background-color: #f00;
+}
+.sidebar ul
+{
+	margin: 0;
+	list-style-type: none;
+}
+.sidebar ul ul
+{
+	margin: 0 0 0 1em;
+	padding: 0.33em 0 0.67em 0;
+	list-style-type: square;
+/*test-pr*/	background-color: #636;
+}
+.sidebar ul ul li
+{
+	padding: 0.33em 0;
+	width: 100%;
+	line-height: 1.33em;
+}
+
+/* ---------------------------------------------- */
+
+.title
+{
+}
+
+.nav
+{
+}
+
+.textfield
+{
+}
+
+.alt
+{
+	background-color: #eee;
+/*test-pr*/	background-color: #ccc;
+}
+
+.meta
+{
+	font-size: 0.83em;
+}
+.meta a
+{
+	color: #666;
+}
+.meta a:hover, .meta a:active
+{
+	color: #000;
+}
+
+.entry
+{
+	padding: 0.67em 0;
+/*test-pr*/	background-color: #f09;
+}
+.entry a:link
+{
+	text-decoration: underline;
+}
+.entry a:visited
+{
+	color: #f33;
+	text-decoration: underline;
+}
+.entry a:hover, .entry a:active
+{
+	color: #f00;
+	text-decoration: none;
+}
+.entry img
+{
+	padding: 4px;
+	background-color: #fff;
+}
+
+.separator
+{
+	height: 20px;
+/*test-pr*/	background-color: #6c9;
+}
+
+.rssfeed
+{
+	padding: 2px 0px 2px 20px;
+
+	background-position: left center;
+	background-image: url(images/feed.png);
+	background-repeat: no-repeat;
+
+	font-size: 0.83em;
+}
+
+.ad
+{
+	margin: 0 auto;
+	border: 5px solid #f00;
+	width: 468px;
+}
+
+/* ---------------------------------------------- */
+
+.content
+{
+	margin: 10px 170px 0px 170px;
+	padding: 0px 5px;
+/*test-pr*/	background-color: #f96;
+}
+.content .navigation
+{
+	clear: none;
+	line-height: 32px;
+	text-align: center;
+/*test-pr*/	background-color: #fff;
+}
+
+/* ---------------------------------------------- */
+
+.post
+{
+/*test-pr*/	background-color: #f99;
+}
+.post .navigation .button a:link, .post .navigation .button a:visited
+{
+	float: right;
+	margin-right: 20px;
+	padding: 0 1em;
+
+	border: 2px solid #393;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+
+	line-height: 28px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #393;
+}
+.post .navigation .button a:hover, .post .navigation .button a:active
+{
+	border-style: inset;
+	color: #fff;
+	background-color: #383;
+	text-decoration: none;
+}
+
+/* ---------------------------------------------- */
+
+.comment
+{
+/*test-pr*/	background-color: #bbd;
+}
+.comment .meta
+{
+	padding-left: 17px;
+	background-position: left top;
+
+	font-size: 1em;
+	font-weight: bold;
+	color: #333;
+	background-image: url(images/comment.gif);
+	background-repeat: no-repeat;
+}
+.comment .meta .date
+{
+	font-size: 0.83em;
+	font-weight: normal;
+	color: #099;
+/*test-pr*/	background-color: #99c;
+}
+
+.comment form
+{
+	margin: 0px auto;
+	width: 468px;
+/*test-pr*/	background-color: #669;
+}
+.comment form p input.textfield
+{
+	width: 260px;
+}
+.comment form p input.submit
+{
+	width: 11em;
+}
+.comment form p textarea
+{
+	width: 460px;
+	height: 180px;
+}
+
+.comment .ad
+{
+	border: 0;
+	width: 468px;
+}
+
+/* ---------------------------------------------- */
+
+#wp-calendar
+{
+	padding: 0.33em 0 0.67em 0;
+	width: 100%;
+/*test-pr*/	background-color: #f9c;
+}
+.widget_calendar h2
+{
+	display: none;
+}
+#wp-calendar th, td
+{
+	text-align: center;
+}
+#wp-calendar a
+{
+	font-weight: bold;
+}
+#wp-calendar tbody a
+{
+	color: #000;
+}
+#wp-calendar tbody a:hover, #wp-calendar tbody a:active
+{
+	color: #f66;
+}
+#wp-calendar #next a
+{
+	float: right;
+/*test-pr*/	background-color: #f6c;
+}
+#wp-calendar #prev a
+{
+	float: left;
+/*test-pr*/	background-color: #f0c;
+}
+
+/* ---------------------------------------------- */
+
+.signup-form table
+{
+	clear: both;
+	margin: 0px auto;
+	border: 8px outset #666;
+	border-spacing: 6px;
+
+	background-color: #ccc;
+}
+
+.signup-form td
+{
+	border: 1px inset #999;
+	padding: 0px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.signup-form input.text-field
+{
+	border: 0px;
+	padding: 4px;
+	width: 15em;
+	height: 18px;
+	font-weight: bold;
+}
+
+.signup-form input.submit
+{
+	margin: 1em auto 1em 8em;
+	padding: 2px 1.17em;
+	border: 1px outset #999;
+	width: 7em;
+	font-weight: normal;
+}
+
+/* other styles end */
+
+/* ============================================== */
+/* ============================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

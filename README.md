@@ -1,5 +1,5 @@
 
-Andromeda is 3 column theme created with main purpose to be fully functional, AdSense and widget ready, SEO friendly and easy for customization.
+Andromeda is 3 column WordPress theme created with main purpose to be fully functional, AdSense and widget ready, SEO friendly and easy for customization.
 
 Any questions, suggestions, bugs and others please email to Georgi Kovachev at peorex@gmail.com.
 
